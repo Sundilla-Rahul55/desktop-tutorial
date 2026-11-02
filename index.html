@@ -1,41 +1,468 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
+<head><script>window.__V0_SANDBOX_ID__="sb-7g2c5okrgdjv";window.__V0_CHAT_ID__="jyqfmRCG7w7";(function E7(){try{if(!/\bFirefox\//.test(navigator.userAgent)||"u"<typeof PerformanceNavigationTiming)return;let e=Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype,"transferSize");if(!e||!e.get)return;let t=e.get;Object.defineProperty(PerformanceNavigationTiming.prototype,"transferSize",{configurable:!0,get(){let e=t.call(this);if(0!==e||"back_forward"===this.type)return e;let r=window.next,n=r&&"string"==typeof r.version?r.version:"",i=/^16\.2\.(\d+)/.exec(n);return i&&Number(i[1])>=7?1:e}})}catch{}})();window.__V0_SOURCE_MAP_FRAME_ROOT__="file:///vercel/share/v0-project/.next/dev/static";;(function E9(e){let t=Symbol.for("__next_dev_bridge_runtime_observer__"),r=window[t],n=e||{},i=n.messageType||"next-dev-bridge:runtime",a=n.readyMessageType||"next-dev-bridge:runtime-ready",s=n.resetMessageType||"next-dev-bridge:runtime-reset",o=n.targetOrigin||"*",l=!1!==n.isAppDirectory,u="string"==typeof n.sourceMapEndpoint&&n.sourceMapEndpoint?n.sourceMapEndpoint:"",d="string"==typeof n.sourceMapFrameRoot&&n.sourceMapFrameRoot?n.sourceMapFrameRoot.replace(/\/+$/,""):"";if(r)return void f(a,{existing:!0,href:window.location.href,windowId:r.windowId});let c=1,p=`${Date.now()}-${Math.random().toString(36).slice(2)}`,h={errors:[]};function f(e,t){window.parent!==window&&window.parent.postMessage({type:e,...t},o)}async function m(e){let t={...e,id:c++,isFatal:!1,severity:"recoverable",at:new Date().toISOString()};h.errors=[...h.errors,t],f(i,{event:{type:"runtime:error",error:t,errors:h.errors},state:h,href:window.location.href,windowId:p}),u&&(async function(e){var t,r;let n=(t=String(e.stack).split("\n").map(M).filter(Boolean),r=e.filename,t.map(e=>({...e,file:function(e,t){var r,n;if("string"!=typeof e||0===e.length)return;let i=I(e);if(i)return w(i);if(r=e,/^[a-zA-Z][a-zA-Z\d+.-]*:/.test(r))return e;if(t&&x(t)===x(e)){let e=I(t);return e?w(e):t}let a=e.startsWith("_next/")?`/${e}`:e;return a.startsWith("/_next/")?w(a):!(n=a).includes("/")&&n.endsWith(".js")&&(n.startsWith("_")||n.includes("._.")||n.startsWith("node_modules_")||n.startsWith("turbopack-"))?w(`/_next/static/chunks/${a}`):e}(e.file,r)})));return{message:e.message,stack:e.stack,frames:n,mappedFrames:n.length>0?await async function(e){let t=function(e){let t=[],r=new Set;for(let n of(O(t,r,e),[R,A,T])){let i=function(e,t){let r=!1,n=e.map(e=>{if("string"!=typeof e.file)return e;let n=t(e.file);return n&&n!==e.file?(r=!0,{...e,file:n}):e});return r?n:null}(e,n);i&&O(t,r,i)}return t}(e),r=null;for(let n of t){let t=await async function(e){try{let t=function(e){try{return new URL(e,window.location.href).origin!==window.location.origin}catch{return!1}}(u),r={body:JSON.stringify({frames:e,isServer:!1,isEdgeServer:!1,isAppDirectory:l,sourceOrigin:window.location.origin}),cache:"no-store",credentials:t?"omit":"same-origin",method:"POST",mode:t?"cors":"same-origin"};t||(r.headers={"content-type":"application/json"});let n=await fetch(u,{...r});if(!n.ok||204===n.status){let t=await n.text().catch(()=>"");return{mappedFrames:S(e,t||"No original stack frame response from Next dev server."),shouldTryNextVariant:!1}}let i=await n.json();if(!Array.isArray(i))return{mappedFrames:S(e,"Invalid original stack frame response from Next dev server."),shouldTryNextVariant:!1};return{mappedFrames:b(e,i),shouldTryNextVariant:!0}}catch(t){return{mappedFrames:S(e,t instanceof Error?t.message:String(t)),shouldTryNextVariant:!1}}}(n);if(function(e){for(let n of e){var t,r;let e=N(t=n)&&"fulfilled"===t.status&&N(t.value)&&N(t.value.originalStackFrame)?t.value.originalStackFrame:null;if(!e||!0===e.ignored)continue;let i="string"!=typeof(r=e.file)?"":r.trim();if(!(!i||function(e){let t=P(e);return/\/(?:_next\/static|\.next\/dev\/static)\/chunks\//.test(t)||t.includes("/next/dist/compiled/")}(i)))return!0}return!1}(t.mappedFrames))return b(e,t.mappedFrames);if(r=t.mappedFrames,!t.shouldTryNextVariant)break}return r??S(e,"No stack frames to map.")}(n):[]}})(t).then(e=>{h.errors.some(e=>e.id===t.id)&&(t.mapped=e,h.errors=h.errors.map(e=>e.id===t.id?t:e),f(i,{event:{type:"runtime:error",error:t,errors:h.errors},state:h,href:window.location.href,windowId:p}))}).catch(()=>{})}function y(){0!==h.errors.length&&(h.errors=[],f(i,{event:{type:"runtime:cleared",errors:[]},state:h,href:window.location.href,windowId:p}))}function g(e){var t,r,n,i,a;let s,o,l,u;m((s=E((t=e).error,t.message||"Uncaught error"),o=t.filename||void 0,l=D(t.lineno),u=D(t.colno),{source:"error",name:s.name,message:s.message,stack:s.stack||(r=s.message,n=o,i=l,a=u,n&&i&&a?`${r}
+    at <anonymous> (${n}:${i}:${a})`:""),filename:o,line:l,column:u}))}function _(e){let t;m({source:"unhandledrejection",name:(t=E(e.reason,"Unhandled promise rejection")).name,message:t.message,stack:t.stack})}function v(e){let t=e.data;t&&"object"==typeof t&&t.type===s&&y()}function E(e,t){return e instanceof Error?{name:e.name||"Error",message:e.message||t,stack:e.stack||""}:e&&"object"==typeof e?{name:"string"==typeof e.name?e.name:"Error",message:"string"==typeof e.message?e.message:function(e){try{return JSON.stringify(e)}catch{return""}}(e)||t,stack:"string"==typeof e.stack?e.stack:""}:{name:"Error",message:"string"==typeof e?e:null==e?t:String(e),stack:""}}function b(e,t){return e.map((e,r)=>t[r]||{status:"rejected",reason:"No original stack frame response for frame."})}function S(e,t){return e.map(()=>({status:"rejected",reason:t}))}function O(e,t,r){let n=JSON.stringify(r.map(e=>e.file));t.has(n)||(t.add(n),e.push(r))}function w(e){return d?`${d}/${e.replace(/^\/_next\/static\/?/,"")}`:e}function R(e){let t=C(e);return t?`.next/dev/static/${t.replace(/^\/_next\/static\/?/,"")}`:null}function A(e){let t=C(e);return t?t.replace(/^\/+/,""):null}function T(e){let t=C(e);if(!t)return null;try{return new URL(t,window.location.origin).href}catch{return null}}function C(e){var t,r;let n,i=P(e);if(i.startsWith("/_next/static/"))return i;let a=(r="/.next/dev/static/",-1===(n=(t=i).indexOf(r))?"":t.slice(n+r.length));return a?`/_next/static/${a}`:""}function I(e){if(e.startsWith("/_next/"))return e;if(e.startsWith("_next/"))return`/${e}`;try{let t=new URL(e);return t.pathname.startsWith("/_next/")?t.pathname:""}catch{return""}}function P(e){try{return new URL(e).pathname}catch{}return e.startsWith("/")?e:`/${e}`}function x(e){return e.split("?")[0].split(/[\\/]/).pop()||e}function N(e){return"object"==typeof e&&null!==e}function M(e){let t=e.trim();if(!t.startsWith("at "))return null;let r=t.slice(3),n="<anonymous>",i=r,a=r.indexOf("("),s=r.endsWith(")")?r.length-1:-1;-1!==a&&-1!==s&&s>a&&(n=r.slice(0,a).trim()||"<anonymous>",i=r.slice(a+1,s));let o=/^(.*):(\d+):(\d+)$/.exec(i);return o?{file:o[1],methodName:n,arguments:[],line1:Number(o[2]),column1:Number(o[3])}:null}function D(e){return"number"==typeof e&&Number.isFinite(e)&&e>0?e:void 0}window.addEventListener("error",g),window.addEventListener("unhandledrejection",_),window.addEventListener("message",v),window[t]={windowId:p,getSnapshot:()=>({errors:h.errors.slice()}),reset:y,stop:function(){window.removeEventListener("error",g),window.removeEventListener("unhandledrejection",_),window.removeEventListener("message",v),delete window[t]}},f(a,{existing:!1,href:window.location.href,windowId:p})})({"messageType":"next-dev-bridge:event","sourceMapEndpoint":"/_v0/next-dev-bridge-stack-frames","sourceMapFrameRoot":"file:///vercel/share/v0-project/.next/dev/static"});</script><script async src="/v0-runtime-dist.js"></script><style>nextjs-portal{display: none !important}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rshoot | Professional Reel Maker at Your Location, Same-Day Delivery</title>
+  <meta name="description" content="Book a professional reel maker who comes to your location, shoots on a phone, edits on the spot and delivers ready-to-post reels the same day. Packages from ₹1,499." />
+  <meta name="theme-color" content="#FF1F3D" />
+  <!-- PLACEHOLDER: replace https://www.rshoot.in with your live domain -->
+  <link rel="canonical" href="https://www.rshoot.in/" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop Tutorial</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rshoot" />
+  <meta property="og:title" content="Rshoot | Professional Reel Maker, Same-Day Reels" />
+  <meta property="og:description" content="A trained reel-maker comes to you, shoots, edits on the spot and delivers ready-to-post reels the same day." />
+  <meta property="og:url" content="https://www.rshoot.in/" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- PLACEHOLDER: add a 1200x630 share image, e.g. /og-image.webp -->
+  <!-- <meta property="og:image" content="https://www.rshoot.in/og-image.webp" /> -->
 
-        .card {
-            background-color: #161b22;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #30363d;
-            text-align: center;
-        }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rshoot | Professional Reel Maker, Same-Day Reels" />
+  <meta name="twitter:description" content="Reels shot, edited and delivered the same day, at your location." />
 
-        h1 {
-            color: #58a6ff;
-        }
-    </style>
+  <!-- Favicon: the same red bolt as the logo, as an inline SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FF1F3D' d='M13.5 1.5 3.75 13.5H11l-1.5 9 9.75-12H12l1.5-9z'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- FAQ structured data: keep in sync with the FAQ section below -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do I book a reel-maker?", "acceptedAnswer": {"@type": "Answer", "text": "Tap any Book now button. WhatsApp opens with your chosen package already filled in. Send us your date, time and location and we confirm your booking."}},
+      {"@type": "Question", "name": "When will I get my reels?", "acceptedAnswer": {"@type": "Answer", "text": "The same day. Your reel-maker edits on the spot, so your reels are delivered ready to post while the moment is still fresh."}},
+      {"@type": "Question", "name": "What is included in every package?", "acceptedAnswer": {"@type": "Answer", "text": "A trained reel-maker at your location, shooting on a pro-quality phone setup, on-the-spot editing and ready-to-post reels. Selected packages also include music and captions."}},
+      {"@type": "Question", "name": "Will there be a watermark or logo on my reels?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your reels are delivered clean, with no Rshoot logo, so they look like your own content."}},
+      {"@type": "Question", "name": "How does payment work?", "acceptedAnswer": {"@type": "Answer", "text": "We confirm the price on WhatsApp before your shoot. You can pay by UPI or bank transfer. All prices are plus GST."}},
+      {"@type": "Question", "name": "Can I cancel or reschedule?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Message us on WhatsApp as early as possible and we will help you reschedule or cancel according to our booking policy."}}
+    ]
+  }
+  </script>
 </head>
-
 <body>
-    <div class="card">
-        <h1>Hello World! 🚀</h1>
-        <p>My HTML project is running inside Antigravity IDE!</p>
-    </div>
-</body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Reusable SVG symbols: bolt logo and tick icon -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+    <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="M13.5 1.5 3.75 13.5H11l-1.5 9 9.75-12H12l1.5-9z" fill="currentColor"/></symbol>
+    <symbol id="icon-tick" viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- ============ 1. HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="wordmark" aria-label="Rshoot home">
+        <span aria-hidden="true">R</span><svg class="wordmark-bolt" aria-hidden="true"><use href="#icon-bolt"/></svg><span aria-hidden="true">HOOT</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#wedding">Wedding</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="https://wa.me/91XXXXXXXXXX" data-book="General enquiry" target="_blank" rel="noopener">Book now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><svg width="14" height="14" aria-hidden="true"><use href="#icon-bolt"/></svg> Now launched in India</p>
+          <h1 id="hero-title">Your <span class="text-red">professional reel maker</span>, shot, edited and delivered the same day.</h1>
+          <p class="lead">A trained reel-maker comes to your location, shoots on a phone, edits on the spot and hands you ready-to-post reels before the day is over.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://wa.me/91XXXXXXXXXX" data-book="General enquiry" target="_blank" rel="noopener">Book now</a>
+            <a class="btn-link" href="#packages">View packages <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <p class="hero-note">Packages from <strong>₹1,499</strong> + GST</p>
+        </div>
+
+        <!-- Phone mockup built in CSS, so there are no images to load -->
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="rec"><span class="rec-dot"></span>REC 00:15</div>
+              <svg class="phone-bolt" width="72" height="72"><use href="#icon-bolt"/></svg>
+              <div class="screen-bars">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="screen-progress"><span></span></div>
+            </div>
+          </div>
+          <div class="float-chip chip-top"><svg width="16" height="16"><use href="#icon-tick"/></svg> Edited on the spot</div>
+          <div class="float-chip chip-bottom"><svg width="16" height="16"><use href="#icon-bolt"/></svg> Same-day delivery</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="What you get with every booking">
+      <ul class="container trust-list">
+        <li><svg aria-hidden="true"><use href="#icon-bolt"/></svg>Same-day delivery</li>
+        <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>We come to your location</li>
+        <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>No watermark on your reels</li>
+        <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Pay by UPI or bank transfer</li>
+      </ul>
+    </section>
+
+    <!-- PLACEHOLDER (after launch): "Trusted by" client logos strip goes here -->
+
+    <!-- ============ 3. HOW IT WORKS ============ -->
+    <section class="section section-alt" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps to ready-to-post reels</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Choose a package</h3>
+            <p>Pick the package that fits your event, shop or brand day, then tap Book now to message us on WhatsApp.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Our reel-maker arrives and shoots</h3>
+            <p>A trained reel-maker comes to your location with a pro-quality phone setup and captures every moment.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Get your reels the same day</h3>
+            <p>Your reels are edited on the spot and delivered the same day, ready to post.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4. PACKAGES ============ -->
+    <section class="section" id="packages" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Packages</p>
+          <h2 id="packages-title">Simple pricing for every shoot</h2>
+          <p class="section-sub">Swipe to compare on mobile. Every package includes on-site shooting and same-day editing.</p>
+        </div>
+
+        <div class="cards cards-4" role="list">
+          <article class="card reveal" role="listitem">
+            <h3 class="card-title">Quick Reel</h3>
+            <p class="card-tagline">Your moment, ready to post.</p>
+            <p class="price"><span class="price-now">₹1,499</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>2 hours of shooting on site</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>2 scroll-stopping reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Same-day delivery, so you post while the moment is fresh</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Trained reel-maker with a pro-quality camera setup</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Quick Reel (₹1,499)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card card-featured reveal" role="listitem">
+            <span class="badge">Most Popular</span>
+            <h3 class="card-title">Half Day</h3>
+            <p class="card-tagline">Best for events, shops and brand days.</p>
+            <p class="price"><span class="price-now">₹3,799</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>5 hours of coverage, so no moment is missed</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>4 trend-ready reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Music and captions added, ready to upload</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Same-day delivery</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Half Day (₹3,799)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card reveal" role="listitem">
+            <h3 class="card-title">Full Day</h3>
+            <p class="card-tagline">A whole day of content in one booking.</p>
+            <p class="price"><span class="price-now">₹6,999</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>7 hours of non-stop shooting</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>6 edited reels with a smooth, professional finish</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Perfect for launches, shop days, parties and shoots</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Content for a full week of posting</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Full Day (₹6,999)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card card-dark reveal" role="listitem">
+            <h3 class="card-title">Business / Brand</h3>
+            <p class="card-tagline">Fresh content every month for your brand.</p>
+            <p class="price"><span class="price-now">Custom quote</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Monthly reel plans built around your business</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Quoted by the number of reels you need</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Consistent, on-brand content for your page</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Message us for a tailored quote</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Business / Brand (custom quote)" target="_blank" rel="noopener">Get a quote</a>
+          </article>
+        </div>
+        <p class="gst-note">Prices are + GST.</p>
+      </div>
+    </section>
+
+    <!-- ============ 5. WEDDING PACKAGES ============ -->
+    <section class="section section-alt" id="wedding" aria-labelledby="wedding-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Wedding packages</p>
+          <h2 id="wedding-title">Wedding reels, delivered the same day</h2>
+          <p class="section-sub">Share your celebration with family and friends while everyone is still talking about it.</p>
+        </div>
+
+        <div class="offer-banner reveal" role="note">
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-bolt"/></svg>
+          <p><strong>Launch offer:</strong> Basic wedding package 25% off.</p>
+        </div>
+
+        <div class="cards cards-4 cards-wedding" role="list">
+          <article class="card tier-basic reveal" role="listitem">
+            <h3 class="card-title">Basic</h3>
+            <p class="card-tagline">One big moment, beautifully captured.</p>
+            <p class="price">
+              <span class="price-now">₹11,249</span>
+              <s class="price-old"><span class="sr-only">Was </span>₹14,999</s>
+            </p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>One key event of your choice (ceremony or reception)</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>5 scroll-stopping reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Same-day delivery</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Wedding Basic (₹11,249, launch offer)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card tier-silver reveal" role="listitem">
+            <h3 class="card-title">Silver</h3>
+            <p class="card-tagline">Your highlights, ready to share.</p>
+            <p class="price"><span class="price-now">₹23,999</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>2 key events covered</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>8 trend-ready reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Music and captions added</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Same-day delivery</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Wedding Silver (₹23,999)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card tier-gold reveal" role="listitem">
+            <span class="badge">Most Popular</span>
+            <h3 class="card-title">Gold</h3>
+            <p class="card-tagline">The complete celebration, from every angle.</p>
+            <p class="price"><span class="price-now">₹29,999</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>3 key events covered</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>12 cinematic reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>2 reel-makers, so no moment is missed</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Music and captions added</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Same-day delivery</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Wedding Gold (₹29,999)" target="_blank" rel="noopener">Book now</a>
+          </article>
+
+          <article class="card card-dark tier-platinum reveal" role="listitem">
+            <h3 class="card-title">Platinum</h3>
+            <p class="card-tagline">Every ritual, every smile, every moment.</p>
+            <p class="price"><span class="price-now">₹49,999</span></p>
+            <ul class="ticks">
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Full multi-event coverage</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>18 cinematic reels</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>2 reel-makers</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>A wedding teaser reel for invites and social media</li>
+              <li><svg aria-hidden="true"><use href="#icon-tick"/></svg>Priority same-day delivery</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/91XXXXXXXXXX" data-book="Wedding Platinum (₹49,999)" target="_blank" rel="noopener">Book now</a>
+          </article>
+        </div>
+        <p class="gst-note">Prices are + GST.</p>
+      </div>
+    </section>
+
+    <!-- PLACEHOLDER (after launch): Sample reels / portfolio gallery section goes here.
+         Use lazy-loaded WebP/AVIF posters with width/height set to avoid layout shift. -->
+
+    <!-- ============ 6. WHY CHOOSE RSHOOT ============ -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why Rshoot</p>
+          <h2 id="why-title">Built for people who want to post today</h2>
+        </div>
+        <ul class="benefits">
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-bolt"/></svg></span>
+            <h3>Same-day delivery</h3>
+            <p>Reels are edited on the spot and delivered the same day, while the moment is still fresh.</p>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-tick"/></svg></span>
+            <h3>Affordable pricing</h3>
+            <p>Clear, fixed packages starting at ₹1,499, with no surprise add-ons.</p>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-tick"/></svg></span>
+            <h3>We shoot on site</h3>
+            <p>Your reel-maker comes to your home, shop, venue or event. No studio visit needed.</p>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-tick"/></svg></span>
+            <h3>Music and captions</h3>
+            <p>Selected packages include trending music and captions, so your reels are ready to upload.</p>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-tick"/></svg></span>
+            <h3>Flexible packages</h3>
+            <p>From a 2-hour quick shoot to full wedding coverage and monthly brand plans.</p>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg><use href="#icon-tick"/></svg></span>
+            <h3>No logo on your reel</h3>
+            <p>Your reels are delivered clean, with no watermark, so they look like your own content.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLACEHOLDER (after launch): Testimonials / reviews section goes here. -->
+    <!-- PLACEHOLDER (after launch): Creator profiles / "Meet our reel-makers" section goes here. -->
+    <!-- PLACEHOLDER (after launch): Stats strip (reels delivered, cities, etc.) goes here, only with real numbers. -->
+
+    <!-- ============ 7. FAQ ============ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions, answered</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq reveal">
+            <summary>How do I book a reel-maker?</summary>
+            <p>Tap any Book now button. WhatsApp opens with your chosen package already filled in. Send us your date, time and location and we confirm your booking.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>When will I get my reels?</summary>
+            <p>The same day. Your reel-maker edits on the spot, so your reels are delivered ready to post while the moment is still fresh.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>What is included in every package?</summary>
+            <p>A trained reel-maker at your location, shooting on a pro-quality phone setup, on-the-spot editing and ready-to-post reels. Selected packages also include music and captions.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>Will there be a watermark or logo on my reels?</summary>
+            <p>No. Your reels are delivered clean, with no Rshoot logo, so they look like your own content.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>How does payment work?</summary>
+            <p>We confirm the price on WhatsApp before your shoot. You can pay by UPI or bank transfer. All prices are plus GST.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>Can I cancel or reschedule?</summary>
+            <p>Yes. Message us on WhatsApp as early as possible and we will help you reschedule or cancel according to our booking policy.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. FINAL CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container cta-inner reveal">
+        <svg class="cta-bolt" width="48" height="48" aria-hidden="true"><use href="#icon-bolt"/></svg>
+        <h2 id="cta-title">Ready to post something great today?</h2>
+        <p>Book your reel-maker on WhatsApp in under a minute.</p>
+        <a class="btn btn-white btn-lg" href="https://wa.me/91XXXXXXXXXX" data-book="General enquiry" target="_blank" rel="noopener">Book now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 9. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="wordmark" aria-label="Rshoot home">
+          <span aria-hidden="true">R</span><svg class="wordmark-bolt" aria-hidden="true"><use href="#icon-bolt"/></svg><span aria-hidden="true">HOOT</span>
+        </a>
+        <p>On-demand reel-makers. Shot, edited and delivered the same day.</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Quick links</h2>
+        <ul class="footer-links">
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#wedding">Wedding</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+        <!-- PLACEHOLDER: replace phone, email and city with your real details -->
+        <ul class="footer-links">
+          <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+          <li><a href="mailto:hello@rshoot.in">hello@rshoot.in</a></li>
+          <li>Your City, India</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Follow us</h2>
+        <!-- PLACEHOLDER: replace # with your real social profile URLs -->
+        <ul class="socials">
+          <li>
+            <a href="#" aria-label="Rshoot on Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Rshoot on YouTube" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9v6l5-3z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Rshoot on Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h3l1-4h-4V8z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/91XXXXXXXXXX" data-book="General enquiry" aria-label="Chat with Rshoot on WhatsApp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 2.5 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Rshoot. All rights reserved. Prices are + GST.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Book now bar (mobile only) -->
+  <div class="mobile-book">
+    <a class="btn btn-primary btn-block btn-lg" href="https://wa.me/91XXXXXXXXXX" data-book="General enquiry" target="_blank" rel="noopener">
+      <svg width="18" height="18" aria-hidden="true"><use href="#icon-bolt"/></svg> Book now
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
