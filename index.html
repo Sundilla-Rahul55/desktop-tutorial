@@ -77,39 +77,33 @@ try{if(!sessionStorage.getItem('rshoot-intro')&&!matchMedia('(prefers-reduced-mo
       </ul>
     </div>
 
-    <div class="stage">
+    <div class="stage" id="stage">
       <div class="phone-wrap" id="phoneWrap">
         <div class="phone-in">
-          <div class="phone-float">
-            <div class="phone" id="phone" data-mode="video" data-ap="0" aria-hidden="true">
-              <div class="screen">
-                <div class="scene" id="scene"><i class="sun"></i><i class="hill h1"></i><i class="hill h2"></i><i class="subj"></i></div>
-                <i class="island"></i>
-                <div class="glass rec"><i class="dot"></i>REC <b id="recTime">00:00:15</b></div>
-                <div class="glass ap" id="ap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3l4 7M21 12l-8 2M12 21l-4-7M3 12l8-2M5.600 5.600l8 .8M18.400 5.600 15 13M18.400 18.400l-8-.8M5.600 18.400 9 11"/></svg>f/1.8</div>
-                <div class="focus" id="focus"><svg class="expo" viewBox="0 0 24 24" fill="none" stroke="#FFC857" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-                <div class="ui">
-                  <div class="zoom"><span class="glass">0.5x</span><span class="glass on">1x</span><span class="glass">2x</span></div>
-                  <div class="modes"><span>Cinematic</span><span class="on">Video</span><span>Photo</span></div>
-                  <div class="ctrl"><i class="thumb"></i><i class="shutter"></i><i class="glass flip"></i></div>
-                </div>
-              </div>
-            </div>
-            <div class="module" id="module" data-lenses="2" aria-hidden="true">
-              <svg viewBox="0 0 70 72">
-                <rect class="plate" x="1" y="1" width="68" height="70" rx="20"/>
-                <circle class="lens" cx="24" cy="24" r="11"/><circle class="lens l-in" cx="24" cy="24" r="5"/>
-                <circle class="lens" cx="24" cy="49" r="11"/><circle class="lens l-in" cx="24" cy="49" r="5"/>
-                <g class="third"><circle class="lens" cx="48" cy="36" r="11"/><circle class="lens l-in" cx="48" cy="36" r="5"/></g>
-                <circle class="flashdot" cx="55" cy="12" r="3"/>
-              </svg>
-            </div>
+          <div class="ring" aria-hidden="true"></div>
+          <!-- Camera viewfinder HUD (decorative) -->
+          <div class="vf" aria-hidden="true">
+            <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+            <span class="glass rec"><i class="dot"></i>REC <b id="recTime">00:00:15</b></span>
+            <span class="glass ap" id="ap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3l4 7M21 12l-8 2M12 21l-4-7M3 12l8-2M5.600 5.600l8 .8M18.400 5.600 15 13M18.400 18.400l-8-.8M5.600 18.400 9 11"/></svg>f/1.8</span>
+            <div class="zoomrow"><span class="glass">0.5x</span><span class="glass on">1x</span><span class="glass">2x</span></div>
           </div>
+          <div class="phone-float">
+            <!-- Real phone photos, in spin order. The last one (iPhone 18 Pro Max) is where the animation stops.
+                 Without JavaScript only the last image is shown. -->
+            <div class="rotor" id="rotor">
+              <img class="ph" src="img/iphone-15-plus.webp" alt="iPhone 15 Plus, front and back" width="610" height="792">
+              <img class="ph" src="img/iphone-16-plus.webp" alt="iPhone 16 Plus, front and back" width="818" height="1000">
+              <img class="ph" src="img/iphone-17-pro-max.webp" alt="iPhone 17 Pro Max, front, back and side" width="467" height="428">
+              <img class="ph on" src="img/iphone-18-pro-max.webp" alt="iPhone 18 Pro Max, front and back" width="272" height="486">
+            </div>
+            <i class="focus" id="focus" aria-hidden="true"><svg class="expo" viewBox="0 0 24 24" fill="none" stroke="#FFC857" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></i>
+          </div>
+          <i class="floor" aria-hidden="true"></i>
         </div>
         <span class="chip-f f1">Edited on the spot</span>
         <span class="chip-f f2">Same-day delivery</span>
       </div>
-      <div class="switch" id="switch" role="group" aria-label="Phone model"></div>
     </div>
   </div>
 </section>

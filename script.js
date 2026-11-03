@@ -1,21 +1,22 @@
 /* =====================================================================
-   RSHOOT: iPhone-camera style animation (GSAP + ScrollTrigger, vanilla JS)
+   RSHOOT: iPhone-camera style animation with real phone photos (GSAP + ScrollTrigger, vanilla JS)
    EDIT THE VARIABLES BELOW to change timings, easings or phone models.
    ===================================================================== */
 const WHATSAPP_NUMBER = "91XXXXXXXXXX";   // TODO: country code + number, no "+" or spaces
-const CYCLE_MS = 3800;                    // auto-cycle speed of the model switcher
 const TIMELINE_SECONDS = 3599;            // scroll maps to 00:00:00 -> 00:59:59 in the corner widget
 const STEP_AT = [0.02, 0.45, 0.85];       // scroll progress at which each "How it works" step lights up
 const EASE = { out: "power3.out", soft: "expo.out", inOut: "power2.inOut" };
 const DUR = { reveal: 0.9, card: 0.8, stagger: 0.12, flashMs: 180 };   // flashMs must stay under 300
 
-/* Add or rename models here. lenses: 2 or 3. scale/bezel/radius morph the frame. aperture: show f-number control. */
+/* Phone spin order. One entry per <img class="ph"> in index.html, same order. The LAST one is where it stops.
+   focus = where the yellow focus square lands on that photo (x, y as 0..1 of the image). Tweak to taste. */
 const MODELS = [
-  { name: "iPhone 15 Plus",     lenses: 2, scale: 1,    bezel: 12, radius: 44, aperture: false },
-  { name: "iPhone 16 Plus",     lenses: 2, scale: 1,    bezel: 11, radius: 45, aperture: false },
-  { name: "iPhone 17 Pro Max",  lenses: 3, scale: 1.05, bezel: 9,  radius: 46, aperture: false },
-  { name: "iPhone 18 Pro Max",  lenses: 3, scale: 1.06, bezel: 8,  radius: 47, aperture: true  }
+  { name: "iPhone 15 Plus",    focus: [0.17, 0.16] },
+  { name: "iPhone 16 Plus",    focus: [0.12, 0.17] },
+  { name: "iPhone 17 Pro Max", focus: [0.57, 0.16] },
+  { name: "iPhone 18 Pro Max", focus: [0.24, 0.15] }
 ];
+const SPIN = { in: 1.0, hold: 0.7, out: 0.55, finale: 1.7 };   // seconds: enter, pause, exit, final 18 Pro Max spin
 
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
@@ -40,47 +41,10 @@ const MODELS = [
   menu.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
   nav.addEventListener("click", e => { if (e.target.tagName === "A") setMenu(false); });
 
-  /* ---------- 3. Phone: model switcher, modes, zoom, REC timer ---------- */
-  const phone = $("#phone"), module = $("#module"), sw = $("#switch");
-  let cur = 0, cycle = null;
-  const btns = MODELS.map((m, i) => {
-    const b = document.createElement("button");
-    b.type = "button"; b.textContent = m.name; b.setAttribute("aria-pressed", "false");
-    b.addEventListener("click", () => { stopCycle(); applyModel(i); });
-    sw.appendChild(b);
-    return b;
-  });
-  function applyModel(i) {
-    cur = i; const m = MODELS[i];
-    phone.style.setProperty("--s", m.scale);
-    phone.style.setProperty("--bz", m.bezel + "px");
-    phone.style.setProperty("--r", m.radius + "px");
-    phone.dataset.ap = m.aperture ? "1" : "0";
-    module.dataset.lenses = m.lenses;
-    btns.forEach((b, j) => b.setAttribute("aria-pressed", j === i));
-  }
-  function startCycle() { if (!RM && !SMALL) cycle = setInterval(() => { if (!document.hidden) applyModel((cur + 1) % MODELS.length); }, CYCLE_MS); }
-  function stopCycle() { clearInterval(cycle); cycle = null; }
-  sw.addEventListener("keydown", e => {
-    const k = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
-    if (!k) return;
-    e.preventDefault(); stopCycle();
-    const n = (cur + k + MODELS.length) % MODELS.length;
-    applyModel(n); btns[n].focus();
-  });
-  applyModel(0); startCycle();
-
-  // Zoom pills and mode carousel (decorative, mouse/touch only)
-  $$(".zoom span").forEach(s => s.addEventListener("click", () => {
-    $$(".zoom span").forEach(x => x.classList.toggle("on", x === s));
-    $("#scene").dataset.zoom = parseFloat(s.textContent);
-  }));
-  $$(".modes span").forEach(s => s.addEventListener("click", () => {
-    $$(".modes span").forEach(x => x.classList.toggle("on", x === s));
-    phone.dataset.mode = s.textContent.toLowerCase();
-  }));
+  /* ---------- 3. Real iPhone showcase: REC timer ---------- */
+  const imgs = $$(".ph"), focus = $("#focus"), rotor = $("#rotor");
   let recSec = 15;
-  setInterval(() => { if (phone.dataset.mode === "video" && !document.hidden) $("#recTime").textContent = tc(++recSec); }, 1000);
+  setInterval(() => { if (!document.hidden) $("#recTime").textContent = tc(++recSec); }, 1000);
 
   /* ---------- 4. Hero headline: split into words (text unchanged) ---------- */
   const h1 = $("#h1");
@@ -114,15 +78,55 @@ const MODELS = [
   }
   if (document.documentElement.classList.contains("intro-on")) intro(heroIn); else heroIn();
 
-  // Phone floats; focus square pulses; focus pull on the scene
+  // Phone showcase: spin through the models, then stop on the last one
+  const place = (i, f) => {
+    const im = imgs[i];
+    focus.style.left = (rotor.offsetLeft + im.offsetLeft + im.offsetWidth * f[0]) + "px";
+    focus.style.top = (rotor.offsetTop + im.offsetTop + im.offsetHeight * f[1]) + "px";
+  };
+  function ping(i, last) {
+    place(i, MODELS[i].focus);
+    const tl = gsap.timeline();
+    tl.set(focus, { opacity: 0, scale: 1.8 }).set(".expo", { opacity: 0 })
+      .to(focus, { opacity: 1, scale: 1, duration: .4, ease: "power3.out" })
+      .to(".expo", { opacity: 1, y: -4, duration: .25 }, "<.15");
+    if (!last) tl.to([focus, ".expo"], { opacity: 0, duration: .3 }, "+=.35");
+    else tl.to(focus, { scale: .9, duration: .6, ease: "sine.inOut", yoyo: true, repeat: -1 });
+  }
+  function enableTilt() {   // gentle pointer tilt once it has stopped (desktop only)
+    if (!matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+    const im = imgs[imgs.length - 1], st = $("#stage");
+    const rx = gsap.quickTo(im, "rotationX", { duration: .6, ease: "power3.out" });
+    const ry = gsap.quickTo(im, "rotationY", { duration: .6, ease: "power3.out" });
+    st.addEventListener("mousemove", e => {
+      const r = st.getBoundingClientRect();
+      ry(((e.clientX - r.left) / r.width - .5) * 16);
+      rx(-((e.clientY - r.top) / r.height - .5) * 10);
+    });
+    st.addEventListener("mouseleave", () => { ry(0); rx(0); });
+  }
+  gsap.set(imgs, { opacity: 0 });
+  gsap.set("#ap", { opacity: 0, scale: .6 });
+  const spin = gsap.timeline({ delay: .9 });
+  let t = 0;
+  imgs.forEach((im, i) => {
+    const last = i === imgs.length - 1;
+    spin.fromTo(im,
+      { opacity: 0, rotationY: last ? -320 : -100, scale: last ? .6 : .72, x: -70, filter: "blur(10px)" },
+      { opacity: 1, rotationY: 0, scale: 1, x: 0, filter: "blur(0px)", duration: last ? SPIN.finale : SPIN.in, ease: EASE.soft }, t);
+    spin.add(() => ping(i, last), t + (last ? SPIN.finale * .55 : SPIN.in * .6));
+    if (!last) {
+      const o = t + SPIN.in + SPIN.hold;
+      spin.to(im, { opacity: 0, rotationY: 100, scale: .72, x: 70, filter: "blur(10px)", duration: SPIN.out, ease: "power3.in" }, o);
+      t = o + SPIN.out * .45;
+    }
+  });
+  spin.to("#ap", { opacity: 1, scale: 1, duration: .5, ease: "back.out(2)" }, ">-0.4").add(enableTilt);
+  addEventListener("resize", () => { if (focus.style.left) place(imgs.length - 1, MODELS[MODELS.length - 1].focus); });
+
+  // Float and ground shadow
   gsap.to(".phone-float", { y: -12, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: -1 });
-  gsap.timeline({ repeat: -1, repeatDelay: 1.6, delay: 1.8 })
-    .set(["#focus", ".expo"], { opacity: 0 }).set("#focus", { scale: 1.7 }).set("#scene", { filter: "blur(7px)" })
-    .to("#focus", { opacity: 1, scale: 1, duration: .55, ease: "power3.out" })
-    .to(".expo", { opacity: 1, y: -6, duration: .35 }, "<.2")
-    .to("#scene", { filter: "blur(0px)", duration: .9, ease: "power2.out" }, "<.1")
-    .to("#focus", { scale: .88, duration: .25, yoyo: true, repeat: 1 }, ">-.3")
-    .to(["#focus", ".expo"], { opacity: 0, duration: .5 }, "+=1.2");
+  gsap.to(".floor", { scaleX: .82, opacity: .55, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: -1 });
 
   // Scroll progress bar
   gsap.to("#progress", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: .2 } });
