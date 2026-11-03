@@ -10,7 +10,7 @@
 <meta property="og:title" content="R⚡HOOT | Professional Reel Maker, Same-Day Reels">
 <meta property="og:description" content="Shot, edited and delivered the same day, at your location.">
 <meta property="og:url" content="https://www.rshoot.in/">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#050505">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23FF2D55' d='M19 0 4 19h9l-3 13 18-22h-10z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
 <header class="top">
   <a class="logo" href="#top" aria-label="Rshoot home">R<svg class="bolt" aria-hidden="true"><use href="#bolt"/></svg>HOOT</a>
   <nav aria-label="Main">
-    <a href="#optics">Optics</a><a href="#moments">Moments</a><a href="#bodies">Bodies</a><a href="#system">System</a><a href="#journal">Journal</a>
+    <a href="#optics">Optics</a><a href="#bodies">Bodies</a><a href="#system">System</a><a href="#journal">Journal</a>
   </nav>
   <a class="btn" data-book data-pkg="a reel shoot" href="https://wa.me/91XXXXXXXXXX">Book now</a>
 </header>
@@ -35,129 +35,69 @@
 <section class="hero" id="top">
   <p class="eyebrow">On-demand reel-making</p>
   <h1>Every layer of a <em>great reel.</em></h1>
-  <p class="lead">Shot, edited and delivered the same day. Scroll to take the phone apart.</p>
+  <p class="lead">Shot, edited and delivered the same day. Scroll to pull the camera apart.</p>
   <a class="btn btn-solid" data-book data-pkg="a reel shoot" href="https://wa.me/91XXXXXXXXXX">Book now</a>
-  <a class="cue" href="#optics" aria-label="Scroll to the teardown"><span></span></a>
+  <a class="cue" href="#optics" aria-label="Scroll to the exploded view"><span></span></a>
 </section>
 
-<!-- TEARDOWN: scroll sets --p (0 assembled, 1 exploded). One photo (img/iphone-17-pro-max.webp) is cut into parts with CSS.
-     Crop numbers are pixels of the 467x428 image: --x/--y/--w/--h. -->
-<section class="teardown" id="optics" aria-label="iPhone 17 Pro Max teardown">
+<!-- EXPLODED VIEW: scroll drives --p (0 assembled, 1 exploded). Layers are listed back to front. -->
+<section class="explode" id="optics" aria-label="Exploded camera assembly">
   <div class="pin">
     <div class="hud">
-      <p class="eyebrow">Teardown</p>
+      <p class="eyebrow">Exploded view</p>
       <h2>Inside the frame</h2>
-      <!-- PLACEHOLDER copy: replace with your own descriptions -->
-      <ol class="parts">
-        <li class="part" tabindex="0"><span class="n">01</span><h3>Front display &amp; glass</h3><p>The surface your audience sees first.</p></li>
-        <li class="part" tabindex="0"><span class="n">02</span><h3>Camera plateau &amp; lens stack</h3><p>Where every frame begins.</p></li>
-        <li class="part" tabindex="0"><span class="n">03</span><h3>Side frame</h3><p>The rail that holds it all together.</p></li>
-        <li class="part" tabindex="0"><span class="n">04</span><h3>Back shell</h3><p>The steady base of the build.</p></li>
+      <!-- PLACEHOLDER copy: replace the descriptions with your real specs -->
+      <ol class="callouts">
+        <li class="callout" tabindex="0"><span class="n">01</span><h3>Front display &amp; glass</h3>
+          <dl><div><dt>Glass elements</dt><dd>Precision-ground, multi-element</dd></div><div><dt>Surface</dt><dd>Anti-glare, oleophobic</dd></div></dl></li>
+        <li class="callout" tabindex="0"><span class="n">02</span><h3>Camera module &amp; lens stack</h3>
+          <dl><div><dt>Lens coating stack</dt><dd>Multi-layer anti-reflective</dd></div><div><dt>Focus ring</dt><dd>Continuous, silent</dd></div></dl></li>
+        <li class="callout" tabindex="0"><span class="n">03</span><h3>Logic board &amp; battery</h3>
+          <dl><div><dt>Sensor</dt><dd>Large-format, low noise</dd></div><div><dt>Processing</dt><dd>On-device, same-day edit</dd></div></dl></li>
+        <li class="callout" tabindex="0"><span class="n">04</span><h3>Back shell &amp; body</h3>
+          <dl><div><dt>Body</dt><dd>Rigid and balanced</dd></div><div><dt>Finish</dt><dd>Matte, fingerprint-resistant</dd></div></dl></li>
       </ol>
     </div>
 
     <div class="scene">
-      <i class="glow" aria-hidden="true"></i>
       <div class="tilt">
         <div class="assembly">
-          <!-- Back shell (back view). The camera plateau lifts off it. -->
-          <div class="plate shell" data-part="3" style="--x:216;--y:0;--w:207;--h:428">
-            <div class="crop"><img src="img/iphone-17-pro-max.webp" alt="" width="467" height="428"></div>
-            <i class="hole" aria-hidden="true"></i>
-            <div class="plate module" data-part="1" style="--x:228;--y:8;--w:186;--h:110">
-              <div class="crop"><img src="img/iphone-17-pro-max.webp" alt="" width="467" height="428"></div>
-            </div>
-          </div>
-          <!-- Side frame (side view) slides out sideways -->
-          <div class="plate frame" data-part="2" style="--x:432;--y:0;--w:35;--h:428">
-            <div class="crop"><img src="img/iphone-17-pro-max.webp" alt="" width="467" height="428"></div>
-          </div>
-          <!-- Front display (front view), nearest to the viewer. The macaw perches on its top edge. -->
-          <div class="plate display" data-part="0" style="--x:0;--y:0;--w:208;--h:428">
-            <div class="crop"><img src="img/iphone-17-pro-max.webp" alt="iPhone 17 Pro Max, taken apart into display, camera plateau, side frame and back shell" width="467" height="428"></div>
-            <i class="perch" id="perch" aria-hidden="true"></i>
-          </div>
+          <i class="axis" aria-hidden="true"></i>
+          <figure class="layer" style="--i:0;--t:.08;--ar:.77">
+            <img src="img/iphone-15-plus.webp" alt="Back shell and body" width="610" height="792">
+            <figcaption class="tag">04 · Back shell &amp; body</figcaption>
+          </figure>
+          <figure class="layer" style="--i:1;--t:.04;--ar:.82">
+            <img src="img/iphone-16-plus.webp" alt="Internal logic board and battery" width="818" height="1000">
+            <figcaption class="tag">03 · Logic board &amp; battery</figcaption>
+          </figure>
+          <figure class="layer" style="--i:2;--t:0;--ar:1.09;--s:.78">
+            <img src="img/iphone-17-pro-max.webp" alt="Camera module and lens stack" width="467" height="428">
+            <figcaption class="tag">02 · Camera module &amp; lens stack</figcaption>
+          </figure>
+          <figure class="layer top" style="--i:3;--t:-1;--ar:.56">
+            <img src="img/iphone-18-pro-max.webp" alt="Front display and glass" width="272" height="486">
+            <figcaption class="tag">01 · Front display &amp; glass</figcaption>
+          </figure>
         </div>
       </div>
     </div>
 
-    <p class="hint" id="hint" aria-hidden="true">Scroll to take it apart · Move your cursor to inspect</p>
-
-    <!-- Orange macaw: original SVG. Flies in from the top-right once the teardown completes, then perches. -->
-    <div class="macaw" id="macaw" aria-hidden="true">
-      <svg class="bird" viewBox="0 0 260 220">
-        <defs><linearGradient id="mBody" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa13a"/><stop offset="1" stop-color="#ff5a14"/></linearGradient></defs>
-        <path d="M150 112C190 120 232 160 250 214 222 200 188 172 146 134Z" fill="#e23b12"/>
-        <path d="M146 122C178 140 206 170 222 212 198 198 170 176 140 144Z" fill="#1d63c9"/>
-        <path d="M140 126C168 144 190 168 202 204 184 190 162 172 134 148Z" fill="#ffc933"/>
-        <g transform="translate(114 90)" opacity=".7"><g class="wing far">
-          <path d="M2-6C46-34 112-38 166-8 122 4 68 16 2 16Z" fill="#1c63c9"/><path d="M2-4C42-24 92-26 132-8 98 2 56 12 2 14Z" fill="#ffc933"/><path d="M0-4C26-16 58-16 88-6 60 0 28 8 0 12Z" fill="#ff5a1f"/></g></g>
-        <g class="legs" stroke="#6b5a4a" stroke-width="5" stroke-linecap="round" fill="none"><path d="M108 136 104 160M130 140 128 160M94 162H114M120 162H140"/></g>
-        <ellipse cx="118" cy="104" rx="50" ry="36" transform="rotate(-24 118 104)" fill="url(#mBody)"/>
-        <circle cx="72" cy="70" r="29" fill="url(#mBody)"/>
-        <ellipse cx="62" cy="74" rx="17" ry="14" fill="#fff1d8"/>
-        <path d="M50 70q8-5 16-2M50 78q10-4 18-1" stroke="#d9b98b" stroke-width="1.2" fill="none"/>
-        <circle cx="60" cy="68" r="8" fill="#ffd34d"/><circle cx="60" cy="68" r="4.6" fill="#161616"/><circle cx="58.500" cy="66.500" r="1.400" fill="#fff"/>
-        <path d="M52 58C28 52 14 72 24 98 28 88 36 84 46 84 44 76 52 70 62 70Z" fill="#f4e9d2"/>
-        <path d="M30 92C36 102 48 102 58 92 50 88 38 86 30 92Z" fill="#2b2b2b"/>
-        <g transform="translate(112 88)"><g class="wing">
-          <path d="M2-6C46-34 112-38 166-8 122 4 68 16 2 16Z" fill="#1c63c9"/><path d="M2-4C42-24 92-26 132-8 98 2 56 12 2 14Z" fill="#ffc933"/><path d="M0-4C26-16 58-16 88-6 60 0 28 8 0 12Z" fill="#ff5a1f"/>
-          <path d="M30 6 150-2M40 10 140 6" stroke="rgba(0,0,0,.2)" stroke-width="1.500" fill="none"/></g></g>
-      </svg>
+    <div class="readout" aria-hidden="true">
+      <span>Assembled</span><div class="track"><i id="bar"></i></div><span>Exploded <b id="pct">00%</b></span>
     </div>
+    <p class="hint" id="hint" aria-hidden="true">Scroll to explode · Move your cursor to inspect</p>
   </div>
-</section>
-
-<!-- CAPTURING MOMENTS: Indian wedding video showcase.
-     VIDEO: put your own footage at video/wedding-showcase.mp4 (H.264 MP4). Until it exists, the illustrated poster and a "coming soon" note show. -->
-<section class="moments" id="moments" aria-label="Capturing moments">
-  <p class="eyebrow">Capturing moments</p>
-  <h2>Indian weddings, <em>cinematically told.</em></h2>
-  <p class="sub">From the haldi to the vidaai, every ritual and every quiet glance, shot, edited and delivered the same day.</p>
-  <div class="vframe" id="vframe">
-    <div class="vframe-in">
-      <video id="wvideo" preload="none" playsinline data-src="video/wedding-showcase.mp4" aria-label="Indian wedding videography showcase"></video>
-      <div class="poster" aria-hidden="true">
-        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d0b17"/><stop offset=".5" stop-color="#6b1f2a"/><stop offset=".85" stop-color="#e8622a"/><stop offset="1" stop-color="#f5b83d"/></linearGradient>
-            <radialGradient id="pf"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="1600" height="900" fill="url(#pg)"/>
-          <g fill="#ffd27a" opacity=".22"><circle cx="220" cy="180" r="70"/><circle cx="1380" cy="140" r="90"/><circle cx="1240" cy="360" r="46"/><circle cx="360" cy="420" r="54"/><circle cx="980" cy="90" r="40"/></g>
-          <path d="M470 360Q800 190 1130 360V396H470Z" fill="#3a1020" stroke="#f5b83d" stroke-width="6"/>
-          <g fill="#5c1c2c" stroke="#f5b83d" stroke-width="3"><rect x="490" y="396" width="30" height="330"/><rect x="1080" y="396" width="30" height="330"/><rect x="640" y="396" width="22" height="330"/><rect x="938" y="396" width="22" height="330"/></g>
-          <g fill="none" stroke="#f2a31c" stroke-width="16" stroke-linecap="round" stroke-dasharray="0.1 20"><path d="M505 400Q580 500 651 400"/><path d="M651 400Q800 520 949 400"/><path d="M949 400Q1020 500 1095 400"/><path d="M490 372Q800 210 1110 372"/></g>
-          <rect y="726" width="1600" height="174" fill="#2a0c14"/><rect x="420" y="726" width="760" height="22" fill="#4a1626"/>
-          <ellipse cx="800" cy="728" rx="170" ry="14" fill="#000" opacity=".35"/>
-          <circle cx="752" cy="520" r="26" fill="#1b0a10"/><path d="M722 556Q752 540 782 556L790 720H714Z" fill="#f5e6c8"/><path d="M714 600H790V640H714Z" fill="#f2711c"/>
-          <circle cx="850" cy="530" r="24" fill="#1b0a10"/><path d="M822 560Q850 546 878 560L910 722H790Z" fill="#c4122f"/><path d="M800 696H900L910 722H790Z" fill="#f5b83d"/><path d="M826 548Q850 520 874 548L880 600Q850 580 820 600Z" fill="#e0334f" opacity=".85"/>
-          <g><circle cx="470" cy="712" r="50" fill="url(#pf)"/><path d="M470 684q11 15 0 28q-11-13 0-28z" fill="#ffd27a"/><ellipse cx="470" cy="722" rx="22" ry="9" fill="#b4531a"/>
-             <circle cx="1130" cy="712" r="50" fill="url(#pf)"/><path d="M1130 684q11 15 0 28q-11-13 0-28z" fill="#ffd27a"/><ellipse cx="1130" cy="722" rx="22" ry="9" fill="#b4531a"/></g>
-          <g fill="#f2a31c" opacity=".8"><ellipse cx="300" cy="560" rx="10" ry="5" transform="rotate(30 300 560)"/><ellipse cx="1300" cy="520" rx="10" ry="5" transform="rotate(-30 1300 520)"/><ellipse cx="1180" cy="620" rx="9" ry="4.500" transform="rotate(50 1180 620)"/><ellipse cx="420" cy="640" rx="9" ry="4.500" transform="rotate(-20 420 640)"/></g>
-        </svg>
-      </div>
-      <div class="vcap" aria-hidden="true"><span>Haldi</span><span>Mehendi</span><span>Sangeet</span><span>Pheras</span><span>Vidaai</span></div>
-      <button class="playbtn" id="wplay" type="button" aria-label="Play the wedding showcase"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-      <p class="soon">Showcase video coming soon</p>
-    </div>
-  </div>
-  <ul class="points">
-    <li><h3>Traditional ceremonies</h3><p>Pheras, haldi, mehendi, sangeet and vidaai, covered start to finish.</p></li>
-    <li><h3>Candid emotions</h3><p>The laughter, the tears and the quiet glances between the big moments.</p></li>
-    <li><h3>Professional videography</h3><p>A trained reel-maker with a pro-quality phone setup, editing on the spot.</p></li>
-  </ul>
-  <a class="btn btn-solid" data-book data-pkg="a wedding shoot" href="https://wa.me/91XXXXXXXXXX">Book your wedding shoot</a>
 </section>
 
 <section class="block" id="bodies">
   <p class="eyebrow">Bodies</p>
-  <h2>Four parts, one frame</h2>
+  <h2>Four layers, one frame</h2>
   <div class="grid4">
-    <article><span>01</span><h3>Display &amp; glass</h3><p>The surface your audience sees first.</p></article>
-    <article><span>02</span><h3>Camera plateau</h3><p>Where every frame begins.</p></article>
-    <article><span>03</span><h3>Side frame</h3><p>Holds the whole build together.</p></article>
-    <article><span>04</span><h3>Back shell</h3><p>The steady base of every shoot.</p></article>
+    <article><img src="img/iphone-18-pro-max.webp" alt="" loading="lazy"><h3>Front display &amp; glass</h3><p>The surface your audience sees first.</p></article>
+    <article><img src="img/iphone-17-pro-max.webp" alt="" loading="lazy"><h3>Camera module &amp; lens stack</h3><p>Where every frame begins.</p></article>
+    <article><img src="img/iphone-16-plus.webp" alt="" loading="lazy"><h3>Logic board &amp; battery</h3><p>The engine behind on-the-spot editing.</p></article>
+    <article><img src="img/iphone-15-plus.webp" alt="" loading="lazy"><h3>Back shell &amp; body</h3><p>The steady base that holds it together.</p></article>
   </div>
 </section>
 
