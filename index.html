@@ -5,76 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>R⚡HOOT | Professional Reel Maker in India</title>
-
     <meta name="description" content="Book a professional reel maker who comes to your location, shoots on a phone, edits on the spot and delivers ready-to-post reels the same day. Packages from ₹1,499.">
-
     <meta name="theme-color" content="#FF1F3D">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.example.com/">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="R⚡HOOT | Professional Reel Maker">
-    <meta property="og:description" content="Shot, edited and delivered the same day. Book a reel-maker for your shop, event, brand or wedding.">
-    <meta property="og:url" content="https://www.example.com/">
-    <meta property="og:image" content="https://www.example.com/og-image.png">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="R⚡HOOT | Professional Reel Maker">
-    <meta name="twitter:description" content="Same-day reels, shot and edited on site. Packages from ₹1,499.">
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23FF1F3D' d='M19 0 4 19h9l-3 13 18-22h-10z'/%3E%3C/svg%3E">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- SEO Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I book a reel-maker?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tap Book now on any package. WhatsApp opens with your package name filled in. Send it, tell us your date and location, and we confirm your slot."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How fast will I get my reels?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Reels are edited on the spot and delivered the same day."
-          }
-        }
-      ]
-    }
-    </script>
 </head>
-<body style="font-family: 'Poppins', sans-serif; background-color: #0d0d0d; color: #ffffff; margin: 0; padding: 0;">
+<body>
 
-    <!-- Hero Section -->
-    <header style="text-align: center; padding: 80px 20px; max-width: 800px; margin: 0 auto;">
-        <h1 style="font-size: 3rem; margin-bottom: 10px; color: #FF1F3D;">R⚡HOOT</h1>
-        <p style="font-size: 1.4rem; font-weight: 600; margin-bottom: 20px;">Professional Reel Maker in India</p>
-        <p style="font-size: 1rem; color: #b3b3b3; line-height: 1.6; margin-bottom: 30px;">
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <h1 class="brand-logo">R⚡HOOT</h1>
+        <h2 class="hero-tagline">Professional Reel Maker in India</h2>
+        <p class="hero-desc">
             Book a professional reel maker who comes to your location, shoots on a phone, edits on the spot and delivers ready-to-post reels the same day. Packages from ₹1,499.
         </p>
-        <a href="#packages" style="display: inline-block; background-color: #FF1F3D; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(255, 31, 61, 0.4);">Book Now</a>
+        <a href="#packages" class="cta-btn">Book Now</a>
     </header>
 
-    <!-- JavaScript Link -->
+    <!-- Phone Mockup Frame Container -->
+    <section class="mockup-section">
+        <div class="phone-frame">
+            <div class="notch"></div>
+            <div class="phone-screen">
+                <div class="reel-badge">LIVE DEMO</div>
+                <div class="reel-content">
+                    <h3>Same-Day High-Impact Reels</h3>
+                    <p>Shot & edited on location for maximum engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <h2 class="section-title">Packages & Pricing</h2>
+        <div class="package-grid">
+            
+            <div class="package-card">
+                <h3>Starter Shoot</h3>
+                <p class="price">₹1,499</p>
+                <ul>
+                    <li>✓ 1-Hour Shoot Session</li>
+                    <li>✓ 2 Edited Reels</li>
+                    <li>✓ On-the-spot delivery</li>
+                    <li>✓ Standard Color Grading</li>
+                </ul>
+                <a href="https://wa.me/?text=Hi%2C%20I%20want%20to%20book%20the%20Starter%20Shoot%20package." class="package-btn">Book Package</a>
+            </div>
+
+            <div class="package-card featured">
+                <span class="badge">POPULAR</span>
+                <h3>Pro Creator</h3>
+                <p class="price">₹3,499</p>
+                <ul>
+                    <li>✓ 3-Hour Shoot Session</li>
+                    <li>✓ 5 Edited Reels</li>
+                    <li>✓ Custom Trending Audio</li>
+                    <li>✓ Express Same-Day Delivery</li>
+                </ul>
+                <a href="https://wa.me/?text=Hi%2C%20I%20want%20to%20book%20the%20Pro%20Creator%20package." class="package-btn">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Brand Takeover</h3>
+                <p class="price">₹6,999</p>
+                <ul>
+                    <li>✓ Full-Day Shoot</li>
+                    <li>✓ 10+ Edited Reels</li>
+                    <li>✓ Full Concept Planning</li>
+                    <li>✓ Priority Editing</li>
+                </ul>
+                <a href="https://wa.me/?text=Hi%2C%20I%20want%20to%20book%20the%20Brand%20Takeover%20package." class="package-btn">Book Package</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4>How do I book a reel maker?</h4>
+            <p>Click "Book Package" on any package. WhatsApp opens automatically with your selection. Send the message with your preferred date and location!</p>
+        </div>
+        <div class="faq-item">
+            <h4>How fast will I get my reels?</h4>
+            <p>Our reel creators edit on site and deliver final exports on the same day.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 R⚡HOOT. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
