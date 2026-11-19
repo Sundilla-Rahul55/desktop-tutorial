@@ -6,11 +6,55 @@
   <title>RSHOOT | Same-Day Reels, Shot &amp; Edited On Site</title>
   <meta name="description" content="RSHOOT comes to your shop, event or wedding, shoots on the latest iPhone, edits on the spot and delivers reels the same day." />
   <meta name="theme-color" content="#0D0D0D" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://rshoot.in/" />
+
+  <!-- Open Graph / WhatsApp / Facebook link preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RSHOOT" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:url" content="https://rshoot.in/" />
+  <meta property="og:title" content="RSHOOT | Same-Day Reels, Shot &amp; Edited On Site" />
+  <meta property="og:description" content="We come to your shop, event or wedding, shoot on the latest iPhone, edit on the spot and hand you reels to post the same day." />
+  <meta property="og:image" content="https://rshoot.in/images/reel-sangeet.jpg" />
+  <meta property="og:image:alt" content="RSHOOT creator filming a sangeet night for a same-day reel" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RSHOOT | Same-Day Reels, Shot &amp; Edited On Site" />
+  <meta name="twitter:description" content="Same-day reels for shops, events and weddings across India. Shot on the latest iPhone, edited on site." />
+  <meta name="twitter:image" content="https://rshoot.in/images/reel-sangeet.jpg" />
+
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RSHOOT",
+    "url": "https://rshoot.in/",
+    "description": "Same-day reel shooting and editing for shops, events and weddings across India, shot on the latest iPhone and edited on site.",
+    "image": "https://rshoot.in/images/reel-sangeet.jpg",
+    "email": "rshoot.india@gmail.com",
+    "telephone": "+918367551859",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "RSHOOT reel packages",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Quick Shoot", "price": "1499", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Quick Shoot: 1 hour, 1 edited reel" } },
+        { "@type": "Offer", "name": "Half Day", "price": "3999", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Half Day: 3 hours, 3 edited reels" } },
+        { "@type": "Offer", "name": "Full Event", "price": "6999", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Full Event: 6 hours, 6 edited reels" } },
+        { "@type": "Offer", "name": "Wedding Day Reels", "price": "14999", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Wedding Day Reels: full day, 2 creators, 12+ edited reels" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -19,17 +63,16 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#home" class="logo logo--header" aria-label="RSHOOT home">
-        <span aria-hidden="true">R</span>
-        <svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>
-        <span aria-hidden="true">HOOT</span>
+        <span class="sr-only">RSHOOT</span><span aria-hidden="true">R</span><svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg><span aria-hidden="true">HOOT</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#how">How it works</a>
+        <a href="#work">Our work</a>
         <a href="#packages">Packages</a>
         <a href="#creator">Become a creator</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="#packages" class="btn btn--red btn--sm">Book now</a>
+      <a href="#book" class="btn btn--red btn--sm">Book now</a>
     </div>
   </header>
 
@@ -53,7 +96,7 @@
             hand you reels to post the same day.
           </p>
           <div class="hero-actions">
-            <a href="#packages" class="btn btn--red btn--lg">
+            <a href="#book" class="btn btn--red btn--lg">
               Book now
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
@@ -72,28 +115,34 @@
         <div class="phones reveal" aria-label="Sample reels">
           <figure class="phone phone--left">
             <div class="phone-screen">
-              <img src="images/reel-cafe.jpg" alt="Barista pouring latte art at a café opening" loading="eager" />
+              <video class="reel-video" data-autoplay autoplay muted loop playsinline preload="auto" poster="images/reel-cafe.jpg" aria-label="Café opening reel preview">
+                <source src="videos/cafe.mp4" type="video/mp4" />
+              </video>
               <span class="phone-notch" aria-hidden="true"></span>
               <span class="chip chip--light">Shooting live</span>
-              <span class="reel-logo" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
+              <span class="reel-logo" role="img" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
               <figcaption><strong>Café opening</strong><span>Edited on site</span></figcaption>
             </div>
           </figure>
           <figure class="phone phone--center">
             <div class="phone-screen">
-              <img src="images/reel-sangeet.jpg" alt="Bride and groom laughing at their sangeet night" loading="eager" />
+              <video class="reel-video" data-autoplay autoplay muted loop playsinline preload="auto" poster="images/reel-sangeet.jpg" aria-label="Sangeet night reel preview">
+                <source src="videos/sangeet.mp4" type="video/mp4" />
+              </video>
               <span class="phone-notch" aria-hidden="true"></span>
               <span class="chip chip--red">Reel ready</span>
-              <span class="reel-logo" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
+              <span class="reel-logo" role="img" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
               <figcaption><strong>Sangeet night</strong><span>Delivered in 2 hrs</span></figcaption>
             </div>
           </figure>
           <figure class="phone phone--right">
             <div class="phone-screen">
-              <img src="images/reel-party.jpg" alt="Friends celebrating a birthday with confetti and sparklers" loading="eager" />
+              <video class="reel-video" data-autoplay autoplay muted loop playsinline preload="auto" poster="images/reel-party.jpg" aria-label="Birthday bash reel preview">
+                <source src="videos/birthday.mp4" type="video/mp4" />
+              </video>
               <span class="phone-notch" aria-hidden="true"></span>
               <span class="chip chip--cyan">Editing</span>
-              <span class="reel-logo" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
+              <span class="reel-logo" role="img" aria-label="RSHOOT">R<svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>HOOT</span>
               <figcaption><strong>Birthday bash</strong><span>Trending audio added</span></figcaption>
             </div>
           </figure>
@@ -138,9 +187,55 @@
           <li class="card card--cyan reveal">
             <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4" /></svg></span>
             <h3>Book in minutes</h3>
-            <p>Tap Book now, share your date and location, and we confirm your slot right away.</p>
+            <p>Fill the quick booking form or tap Book now, and we confirm your slot right away.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Our work -->
+    <section class="section section--border" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our work</span>
+          <h2>See the reels <span class="gradient-text">we deliver</span></h2>
+          <p>Real shoots, cut for the feed. Tap the speaker on any reel to hear it.</p>
+        </div>
+        <ul class="grid grid--3 work-grid">
+          <li class="work-card reveal">
+            <div class="work-video">
+              <video data-autoplay muted loop playsinline preload="none" poster="images/reel-cafe.jpg" aria-label="Café opening reel">
+                <source src="videos/cafe.mp4" type="video/mp4" />
+              </video>
+              <div class="work-meta"><strong>Café opening</strong><span>Edited on site</span></div>
+              <button type="button" class="sound-btn" data-sound aria-pressed="false" aria-label="Turn sound on: Café opening reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z" /><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" /><path class="mute-x" d="m16 9 5 6M21 9l-5 6" /></svg></button>
+            </div>
+          </li>
+          <li class="work-card reveal">
+            <div class="work-video">
+              <video data-autoplay muted loop playsinline preload="none" poster="images/reel-sangeet.jpg" aria-label="Sangeet night reel">
+                <source src="videos/sangeet.mp4" type="video/mp4" />
+              </video>
+              <div class="work-meta"><strong>Sangeet night</strong><span>Delivered in 2 hrs</span></div>
+              <button type="button" class="sound-btn" data-sound aria-pressed="false" aria-label="Turn sound on: Sangeet night reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z" /><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" /><path class="mute-x" d="m16 9 5 6M21 9l-5 6" /></svg></button>
+            </div>
+          </li>
+          <li class="work-card reveal">
+            <div class="work-video">
+              <video data-autoplay muted loop playsinline preload="none" poster="images/reel-party.jpg" aria-label="Birthday bash reel">
+                <source src="videos/birthday.mp4" type="video/mp4" />
+              </video>
+              <div class="work-meta"><strong>Birthday bash</strong><span>Trending audio added</span></div>
+              <button type="button" class="sound-btn" data-sound aria-pressed="false" aria-label="Turn sound on: Birthday bash reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z" /><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" /><path class="mute-x" d="m16 9 5 6M21 9l-5 6" /></svg></button>
+            </div>
+          </li>
+        </ul>
+        <!--
+          Add real client testimonials here once you have them, for example:
+          <ul class="grid grid--3 quotes">
+            <li class="card reveal"><p>"Client quote…"</p><h3>Name, business or event</h3></li>
+          </ul>
+        -->
       </div>
     </section>
 
@@ -181,108 +276,151 @@
         <div class="section-head reveal">
           <span class="eyebrow">Packages</span>
           <h2>Pick the size of your <span class="gradient-text">moment</span></h2>
-          <p>Transparent pricing. Every reel shot on the latest iPhone and edited on site.</p>
+          <p>Clear prices, no guesswork. Every reel is shot on the latest iPhone and finished before we pack up.</p>
         </div>
 
+        <h3 class="group-title reveal">Reel Packages</h3>
         <ul class="grid grid--4 plans">
           <li class="plan reveal">
-            <span class="tier">Basic</span>
+            <span class="tier">Starter</span>
             <h3>Quick Shoot</h3>
-            <p class="plan-tagline">One polished reel for a short moment.</p>
+            <p class="plan-tagline">A single scroll-stopping reel for a small moment.</p>
             <p class="price"><span class="price-now">₹1,499</span></p>
             <p class="price-note">+ GST · per shoot</p>
             <ul class="checks">
-              <li>Up to 1 hour of coverage</li>
-              <li>1 edited reel</li>
-              <li>On-site delivery</li>
-              <li>Shot on latest iPhone</li>
+              <li>Up to 1 hour of shooting</li>
+              <li>1 reel, cut and graded before we leave</li>
+              <li>Handed to you on the spot</li>
+              <li>Filmed in 4K on the latest iPhone</li>
             </ul>
-            <a class="btn btn--dark btn--block" data-book="Quick Shoot" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--dark btn--block" data-book="Quick Shoot" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
 
           <li class="plan reveal">
-            <span class="tier">Silver</span>
+            <span class="tier">Party</span>
             <h3>Half Day</h3>
-            <p class="plan-tagline">For parties, launches and get-togethers.</p>
+            <p class="plan-tagline">Made for parties, launches and small gatherings.</p>
             <p class="price"><span class="price-now">₹3,999</span><s class="price-was">₹4,999</s></p>
             <p class="price-note">+ GST · per shoot</p>
             <ul class="checks">
-              <li>Up to 3 hours of coverage</li>
-              <li>3 edited reels</li>
-              <li>Trending audio &amp; captions</li>
-              <li>On-site delivery</li>
+              <li>Up to 3 hours of shooting</li>
+              <li>3 ready-to-post reels</li>
+              <li>Trending audio and captions added</li>
+              <li>Handed to you on the spot</li>
             </ul>
-            <a class="btn btn--dark btn--block" data-book="Half Day" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--dark btn--block" data-book="Half Day" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
 
           <li class="plan plan--popular reveal">
-            <span class="popular-badge">Most popular</span>
-            <span class="tier tier--gold">Gold</span>
+            <span class="popular-badge">Most popular</span><span class="tier tier--gold">Event</span>
             <h3>Full Event</h3>
-            <p class="plan-tagline">Every highlight, start to finish.</p>
+            <p class="plan-tagline">From the first guest to the final toast, covered.</p>
             <p class="price"><span class="price-now">₹6,999</span><s class="price-was">₹8,999</s></p>
             <p class="price-note">+ GST · per shoot</p>
             <ul class="checks">
-              <li>Up to 6 hours of coverage</li>
-              <li>6 edited reels</li>
-              <li>Story-ready clips</li>
-              <li>Raw footage included</li>
-              <li>Priority creator</li>
+              <li>Up to 6 hours of shooting</li>
+              <li>6 reels, each with its own story</li>
+              <li>Story-ready clips for the same night</li>
+              <li>Raw footage handed over</li>
+              <li>Priority creator assignment</li>
             </ul>
-            <a class="btn btn--red btn--block" data-book="Full Event" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--red btn--block" data-book="Full Event" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
 
           <li class="plan plan--premium reveal">
-            <span class="tier tier--light">Platinum</span>
-            <h3>Wedding &amp; Brand</h3>
-            <p class="plan-tagline">Two creators, full-day coverage.</p>
+            <span class="tier tier--light">Duo</span>
+            <h3>Wedding Day Reels</h3>
+            <p class="plan-tagline">Two creators, one full day, zero missed moments.</p>
             <p class="price"><span class="price-now">₹14,999</span><s class="price-was">₹18,999</s></p>
             <p class="price-note">+ GST · per shoot</p>
             <ul class="checks checks--light">
-              <li>Full-day coverage</li>
-              <li>2 creators on site</li>
+              <li>Full-day coverage from start to finish</li>
+              <li>2 creators filming at once</li>
               <li>12+ edited reels</li>
-              <li>Raw footage included</li>
-              <li>Dedicated coordinator</li>
+              <li>Raw footage handed over</li>
+              <li>A coordinator who runs your shoot schedule</li>
             </ul>
-            <a class="btn btn--white btn--block" data-book="Wedding &amp; Brand" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--white btn--block" data-book="Wedding Day Reels" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
         </ul>
 
-        <ul class="grid grid--2 specials">
-          <li class="special reveal">
-            <h3>Brand shoot</h3>
-            <p class="special-desc">Professional coverage tailored to campaign, launch and showcase moments, scoped around your calendar and deliverables.</p>
-            <p class="special-price"><span>Customised</span><small>+ GST</small></p>
-            <span class="included">What's included</span>
-            <ul class="ticks">
-              <li>Cinematic visuals for premium brands &amp; events</li>
-              <li>Refined, brand-aligned storytelling</li>
-              <li>Professional production with expert direction</li>
-              <li>Hassle-free booking &amp; coordination</li>
-              <li>Quick turnaround: Cut. Polish. Launch.</li>
-              <li>Ideal for campaigns, launches &amp; brand showcases</li>
-              <li>Dedicated creative director for every campaign</li>
-              <li>RSHOOT logo mandatory</li>
+        <!-- Wedding Premium Packages -->
+        <div class="wedding" id="wedding">
+          <div class="group-head reveal">
+            <span class="eyebrow">Wedding Premium Packages</span>
+            <h3>Your whole celebration, <span class="gradient-text">planned as one</span></h3>
+            <p>Photography, stages, music, food and keepsakes brought together under one roof, with RSHOOT capturing every chapter.</p>
+          </div>
+          <ul class="grid grid--3 wedding-grid">
+          <li class="plan wplan reveal">
+            <span class="tier">Silver</span>
+            <h3>Silver Package</h3>
+            <p class="plan-tagline">A complete celebration, planned end to end.</p>
+            <p class="total-label">Total package</p>
+            <p class="price"><span class="price-now">₹2,71,000</span></p>
+            <p class="price-note">Based on the lower end of each stage budget. Final quote confirmed on WhatsApp.</p>
+            <dl class="breakdown">
+              <div><dt>Photography</dt><dd>₹1,30,000</dd></div>
+              <div><dt>Haldi stage</dt><dd>₹15,000 – ₹20,000</dd></div>
+              <div><dt>DJ</dt><dd>₹20,000</dd></div>
+              <div><dt>Marriage stage</dt><dd>₹50,000 – ₹1,00,000</dd></div>
+              <div><dt>Food</dt><dd>₹33,000</dd></div>
+              <div><dt>Wedding cards</dt><dd>₹5,000</dd></div>
+              <div><dt>Handmade wedding collections</dt><dd>₹18,000</dd></div>
+            </dl>
+            <span class="perks-title">Bonus perks</span>
+            <ul class="checks">
+              <li>A same-day sneak-peek reel from your haldi or sangeet</li>
+              <li>A relaxed couple-portrait session on the big day</li>
+              <li>Edited photo gallery you can share with family online</li>
+              <li>One RSHOOT coordinator keeping your timeline on track</li>
             </ul>
-            <a class="btn btn--red btn--block" data-book="Brand shoot" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--dark btn--block" data-book="Wedding Silver Package" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
-          <li class="special reveal">
-            <h3>Product shoot</h3>
-            <p class="special-desc">High-converting product and catalog reels for e-commerce, D2C and brand launches, shot and edited to make your product the hero.</p>
-            <p class="special-price"><small class="rupee">₹</small><span>7,000</span><small>onwards / per reel + GST</small></p>
-            <span class="included">What's included</span>
-            <ul class="ticks">
-              <li>Product, catalog &amp; e-commerce reels</li>
-              <li>Studio or on-location shoots</li>
-              <li>Cinematic reel delivery</li>
-              <li>Shot on the latest iPhone</li>
-              <li>RAW content on request</li>
-              <li>RSHOOT logo mandatory</li>
+
+          <li class="plan wplan plan--popular reveal">
+            <span class="popular-badge">Most complete</span><span class="tier tier--gold">Gold</span>
+            <h3>Gold Package</h3>
+            <p class="plan-tagline">The grand version, with a welcome worth remembering.</p>
+            <p class="total-label">Total package</p>
+            <p class="price"><span class="price-now">₹4,33,000</span></p>
+            <p class="price-note">Based on the lower end of each stage budget. Final quote confirmed on WhatsApp.</p>
+            <dl class="breakdown">
+              <div><dt>Photography</dt><dd>₹1,60,000</dd></div>
+              <div><dt>Haldi stage</dt><dd>₹20,000 – ₹25,000</dd></div>
+              <div><dt>DJ</dt><dd>₹25,000</dd></div>
+              <div><dt>Marriage stage</dt><dd>₹1,00,000 – ₹1,30,000</dd></div>
+              <div><dt>Food</dt><dd>₹50,000</dd></div>
+              <div><dt>Wedding cards</dt><dd>₹10,000</dd></div>
+              <div><dt>Handmade wedding collections</dt><dd>₹18,000</dd></div>
+              <div><dt>Welcome moment</dt><dd>₹50,000</dd></div>
+            </dl>
+            <span class="perks-title">Bonus perks</span>
+            <ul class="checks">
+              <li><strong>Everything in Silver, plus:</strong></li>
+              <li>A cinematic wedding highlight film</li>
+              <li>Live-edited reels from the welcome moment and main ceremony</li>
+              <li>Pre-wedding mini shoot for your save-the-date</li>
+              <li>Drone aerials of the venue (weather and venue permitting)</li>
+              <li>Priority senior creator team with a dedicated planner</li>
             </ul>
-            <a class="btn btn--red btn--block" data-book="Product shoot" href="#">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--red btn--block" data-book="Wedding Gold Package" href="https://wa.me/918367551859">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </li>
-        </ul>
+
+          <li class="plan wplan plan--loading reveal">
+            <span class="tier tier--light">Platinum</span>
+            <h3>Platinum Loading</h3>
+            <p class="plan-tagline">Our most lavish wedding tier is still being polished.</p>
+            <p class="loading-badge" role="status"><span class="loading-dots" aria-hidden="true"><i></i><i></i><i></i></span>Loading</p>
+            <div class="loader" aria-hidden="true"><span></span></div>
+            <div class="skeleton" aria-hidden="true">
+              <div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <p class="loading-note">Be first in line when Platinum goes live.</p>
+            <a class="btn btn--outline btn--block" data-wa="Hi RSHOOT, please notify me when the Wedding Platinum package is live." href="https://wa.me/918367551859" target="_blank" rel="noopener noreferrer">Notify me <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          </li>
+          </ul>
+        </div>
 
         <div class="creator reveal" id="creator">
           <div>
@@ -290,8 +428,65 @@
             <h3>Become a creator</h3>
             <p>Got a phone and an eye for moments? Join us and get paid to shoot events near you.</p>
           </div>
-          <a class="btn btn--outline" data-wa="Hi RSHOOT, I'd like to apply as a creator." href="#" target="_blank" rel="noopener noreferrer">Apply now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          <a class="btn btn--outline" data-wa="Hi RSHOOT, I'd like to apply as a creator." href="https://wa.me/918367551859" target="_blank" rel="noopener noreferrer">Apply now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
         </div>
+      </div>
+    </section>
+
+    <!-- Booking form -->
+    <section class="section section--border" id="book">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Book your shoot</span>
+          <h2>Tell us about your <span class="gradient-text">moment</span></h2>
+          <p>Send your details and we will confirm your slot on WhatsApp.</p>
+        </div>
+        <form class="form-card reveal" id="bookingForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="e.g. Ananya Rao" />
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone number</label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="e.g. 98765 43210" />
+            </div>
+            <div class="field">
+              <label for="f-city">City</label>
+              <input id="f-city" name="city" type="text" autocomplete="address-level2" required placeholder="e.g. Hyderabad" />
+            </div>
+            <div class="field">
+              <label for="f-date">Event date</label>
+              <input id="f-date" name="date" type="date" required />
+            </div>
+            <div class="field field--full">
+              <label for="f-package">Package</label>
+              <select id="f-package" name="package" required>
+                <option value="" selected disabled>Choose a package</option>
+                <optgroup label="Reel Packages">
+                  <option>Quick Shoot</option>
+                  <option>Half Day</option>
+                  <option>Full Event</option>
+                  <option>Wedding Day Reels</option>
+                </optgroup>
+                <optgroup label="Wedding Premium Packages">
+                  <option>Wedding Silver Package</option>
+                  <option>Wedding Gold Package</option>
+                </optgroup>
+                <option>Not sure yet, help me choose</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="f-details">Venue and details <span class="optional">(optional)</span></label>
+              <textarea id="f-details" name="details" rows="3" placeholder="Venue, timings, what you would like us to capture"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--red btn--lg">Send on WhatsApp <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+            <button type="button" class="btn btn--outline btn--lg" id="emailBtn">Send by email</button>
+          </div>
+          <p class="form-note" id="formStatus" role="status" aria-live="polite">Nothing is charged when you send a request. We share payment details once your slot is confirmed.</p>
+        </form>
       </div>
     </section>
 
@@ -305,7 +500,7 @@
         <div class="faq-list">
           <details class="faq reveal">
             <summary>How do I book a reel maker?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Tap Book now on any package and send your date and location. We confirm your slot right away.</p>
+            <p>Fill the booking form or tap Book now on any package and send your date and location. We confirm your slot right away.</p>
           </details>
           <details class="faq reveal">
             <summary>When will I get my reels?<span class="plus" aria-hidden="true"></span></summary>
@@ -313,11 +508,15 @@
           </details>
           <details class="faq reveal">
             <summary>What is included in a package?<span class="plus" aria-hidden="true"></span></summary>
-            <p>Every package lists its hours of coverage and number of edited reels. Gold and Platinum also include raw footage.</p>
+            <p>Every reel package lists its hours of coverage and number of edited reels. Full Event and Wedding Day Reels also include raw footage.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>What are the Wedding Premium Packages?<span class="plus" aria-hidden="true"></span></summary>
+            <p>They bundle photography, stages, DJ, food, wedding cards and handmade collections into one planned celebration. Each total uses the lower end of the stage budgets, and we confirm your final quote on WhatsApp once we know your venue and date.</p>
           </details>
           <details class="faq reveal">
             <summary>How does payment work?<span class="plus" aria-hidden="true"></span></summary>
-            <p>We share payment details once your slot is confirmed. All prices are plus GST.</p>
+            <p>We share payment details once your slot is confirmed. Reel package prices are plus GST.</p>
           </details>
           <details class="faq reveal">
             <summary>Can I cancel or reschedule?<span class="plus" aria-hidden="true"></span></summary>
@@ -338,7 +537,7 @@
       <div class="container container--narrow cta-inner reveal">
         <h2>Your moment <span class="gradient-text">won't wait.</span></h2>
         <p>Send us your date and location. We'll confirm your slot.</p>
-        <a href="#packages" class="btn btn--red btn--lg">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+        <a href="#book" class="btn btn--red btn--lg">Book now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
       </div>
     </section>
   </main>
@@ -346,16 +545,14 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo logo--footer" role="img" aria-label="RSHOOT">
-          <span aria-hidden="true">R</span>
-          <svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg>
-          <span aria-hidden="true">HOOT</span>
+        <span class="logo logo--footer">
+          <span class="sr-only">RSHOOT</span><span aria-hidden="true">R</span><svg viewBox="0 0 22 32" aria-hidden="true"><polygon points="17,0 1,19 10,18 4,32 21,12 12,13" /></svg><span aria-hidden="true">HOOT</span>
         </span>
         <p>Same-day reels, shot and edited on site.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:hello@rhoot.in">hello@rhoot.in</a>
-        <a href="mailto:creators@rhoot.in">creators@rhoot.in</a>
+        <a href="mailto:rshoot.india@gmail.com">rshoot.india@gmail.com</a>
+        <a href="tel:+918367551859">+91 83675 51859</a>
         <small>&copy; <span id="year"></span> RSHOOT. All rights reserved.</small>
       </div>
     </div>
@@ -363,13 +560,13 @@
 
   <!-- Floating actions (left side) -->
   <div class="float-dock" aria-label="Quick actions">
-    <a href="#packages" class="float-btn">
+    <a href="#book" class="float-btn">
       <span class="float-icon float-icon--red">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4" /></svg>
       </span>
       <span class="float-label">Book now</span>
     </a>
-    <a href="#" class="float-btn" data-wa="Hi RSHOOT, I have a question about booking a reel shoot." target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/918367551859" class="float-btn" data-wa="Hi RSHOOT, I have a question about booking a reel shoot." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
       <span class="float-icon float-icon--green">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="wa"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z" /></svg>
       </span>
